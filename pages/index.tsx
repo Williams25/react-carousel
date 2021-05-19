@@ -3,7 +3,7 @@ import { Container } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 type CarouselItem = {
-  sourceImage: string;
+  source: string;
   description: string;
   link: string;
 };
@@ -24,17 +24,17 @@ export default function Home() {
 
   const array: CarouselItem[] = [
     {
-      sourceImage: "./images/2.jpg",
+      source: "./images/2.jpg",
       description: "sucos e doces villa piva",
       link: "",
     },
     {
-      sourceImage: "./images/freshmania.png",
+      source: "./images/freshmania.png",
       description: "caminhão de frete fresh mania",
       link: "",
     },
     {
-      sourceImage: "./images/leite.png",
+      source: "./images/leite.png",
       description: "leite letti A2",
       link: "",
     },
@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <Container className={styled.container}>
-        <Carousel carouselItems={array} />
+        <Carousel carouselItemsDesktop={array} />
       </Container>
     </>
   );
