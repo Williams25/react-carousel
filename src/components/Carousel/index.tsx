@@ -12,7 +12,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 type CarouselProps = {
   carouselItemsDesktop: Array<CarouselItem>;
-  carouselItemsMobile?: Array<CarouselItem>;
+  carouselItemsMobile: Array<CarouselItem>;
+  slideDelay?: number;
 };
 
 type CarouselItem = {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.up("xl")]: {
       height: theme.spacing(40),
     },
-    width: "100%",
+    objectFit: "cover",
   },
   content: {
     width: "100%",
@@ -52,13 +53,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   next: {
     position: "absolute",
-    // right: "1rem",
     marginRight: "2rem",
     zIndex: 5,
   },
   previous: {
     position: "absolute",
-    // left: "1rem",
     marginLeft: "2rem",
     zIndex: 5,
   },
@@ -67,6 +66,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const CarouselTextImage = ({
   carouselItemsDesktop,
   carouselItemsMobile,
+  slideDelay,
 }: CarouselProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
@@ -90,18 +90,29 @@ export const CarouselTextImage = ({
               onClick={previous}
               style={{ left: mediaQueryButton ? "-2rem" : "1rem" }}
             >
-              <ArrowLeft color="primary" fontSize="large" />
+              <img
+                src="./icons/anterior.svg"
+                alt="anterior"
+                width="32"
+                height="32"
+              />
             </IconButton>
             <IconButton
               className={styled.next}
               onClick={next}
               style={{ right: mediaQueryButton ? "-2rem" : "1rem" }}
             >
-              <ArrowRight color="primary" fontSize="large" />
+              <img
+                src="./icons/proximo.svg"
+                alt="proximo"
+                width="32"
+                height="32"
+              />
             </IconButton>
           </>
         )}
         <Carousel
+          className={styled.carousel}
           axis="horizontal"
           showStatus={false}
           showThumbs={false}
@@ -115,19 +126,31 @@ export const CarouselTextImage = ({
           emulateTouch={true}
           selectedItem={currentSlide}
           onChange={updateCurrentSlide}
-          className={styled.carousel}
+          interval={slideDelay | 3000}
         >
-          {carouselItemsDesktop.map((item) => {
-            return (
-              <div key={item.source} className={styled.content}>
-                <img
-                  src={item.source}
-                  alt={item.description}
-                  className={styled.root}
-                />
-              </div>
-            );
-          })}
+          {matches
+            ? carouselItemsDesktop.map((item) => {
+                return (
+                  <div key={item.source} className={styled.content}>
+                    <img
+                      src={item.source}
+                      alt={item.description}
+                      className={styled.root}
+                    />
+                  </div>
+                );
+              })
+            : carouselItemsMobile.map((item) => {
+                return (
+                  <div key={item.source} className={styled.content}>
+                    <img
+                      src={item.source}
+                      alt={item.description}
+                      className={styled.root}
+                    />
+                  </div>
+                );
+              })}
         </Carousel>
       </Box>
     </Box>
