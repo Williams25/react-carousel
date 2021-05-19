@@ -7,7 +7,14 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      position: "relative",
+      // position: "relative",
+      background: "url(./rows.svg)",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPositionX: "0",
+      backgroundPositionY: "11rem",
+      // width: "100%",
+      // height: "100%",
     },
     container: {
       zIndex: 2,
@@ -16,13 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     rowsImage: {
       position: "absolute",
       zIndex: 0,
-      background: "url(./rows.svg)",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      backgroundPositionX: "0",
-      backgroundPositionY: "8rem",
-      width: "100%",
-      height: "100%",
+      
     }
   })
 );
@@ -32,7 +33,7 @@ export default function Home() {
   const { carouselItems, sellersItems } = data;
   return (
     <Container className={styled.root}>
-      <div className={styled.rowsImage}></div>
+      {/* <div className={styled.rowsImage}></div> */}
       <Container className={styled.container}>
         <Carousel
           carouselItemsMobile={carouselItems}
