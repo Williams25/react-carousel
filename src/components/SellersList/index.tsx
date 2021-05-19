@@ -20,10 +20,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
     marginBottom: "1rem",
     width: "100%",
-
-    background: "url(./teste.svg)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    height: "auto",
+    zIndex: 2,
   },
   content: {
     display: "flex",
@@ -33,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexWrap: "wrap",
     width: "75%",
     height: "auto",
+    zIndex: 2,
   },
   imageItem: {
     display: "flex",
@@ -42,10 +41,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     flexWrap: "nowrap",
     margin: "1.5rem 1.5rem 0 1.5rem",
+    zIndex: 2,
   },
   image: {
     width: "6rem",
     height: "6rem",
+    zIndex: 2,
   },
 }));
 
@@ -54,7 +55,7 @@ export const SellersList = ({ title, sellers }: SellersListProps) => {
   return (
     <>
       <Box className={styled.container}>
-        <Typography variant="h2" component="span">
+        <Typography variant="h2" component="span" style={{zIndex: 2}}>
           {title}
         </Typography>
 
