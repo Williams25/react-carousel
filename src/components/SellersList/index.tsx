@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
     marginBottom: "1rem",
     width: "100%",
+
+    background: "url(./teste.svg)",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
   content: {
     display: "flex",
