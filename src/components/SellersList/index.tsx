@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     flexDirection: "row",
     flexWrap: "wrap",
-    width: "65%",
+    width: "75%",
     height: "auto",
   },
   imageItem: {
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center",
     flexDirection: "column",
     flexWrap: "nowrap",
-    margin: "1.5rem 1rem 0 1rem",
+    margin: "1.5rem 1.5rem 0 1.5rem",
   },
   image: {
     width: "6rem",
@@ -50,7 +50,7 @@ export const SellersList = ({ title, sellers }: SellersListProps) => {
   return (
     <>
       <Box className={styled.container}>
-        <Typography variant="h5" component="span">
+        <Typography variant="h2" component="span">
           {title}
         </Typography>
 
@@ -64,10 +64,16 @@ export const SellersList = ({ title, sellers }: SellersListProps) => {
                 className={styled.imageItem}
                 key={item.name}
               >
-                <img className={styled.image} src={item.url} alt={item.name} />
-                <Typography variant="subtitle2" component="span">
-                  {item.name}
-                </Typography>
+                <a href={item.link}>
+                  <img
+                    className={styled.image}
+                    src={item.url}
+                    alt={item.name}
+                  />
+                  <Typography variant="subtitle2" component="p">
+                    {item.name}
+                  </Typography>
+                </a>
               </Grid>
             );
           })}
