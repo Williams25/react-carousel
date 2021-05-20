@@ -1,76 +1,108 @@
 {
   "carouselItems": [
     {
-      "source": "./images/2.jpg",
+      "imgSource": "./images/2.jpg",
       "description": "sucos e doces villa piva",
-      "link": ""
+      "hrefLink": ""
     },
     {
-      "source": "./images/freshmania.png",
+      "imgSource": "./images/freshmania.png",
       "description": "caminhão de frete fresh mania",
-      "link": ""
+      "hrefLink": ""
     },
     {
-      "source": "./images/leite.png",
+      "imgSource": "./images/leite.png",
       "description": "leite letti A2",
-      "link": ""
+      "hrefLink": ""
     }
   ],
   "sellersItems": [
     {
       "name": "Aguá na caixa",
-      "url": "./images/2x/aguanacaixa@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/aguanacaixa@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Almeida Prado",
-      "url": "./images/2x/almeidaprado@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/almeidaprado@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Beta Mel",
-      "url": "./images/2x/betamel@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/betamel@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Jaguacy",
-      "url": "./images/2x/jaguacy@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/jaguacy@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Keiff",
-      "url": "./images/2x/keiff@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/keiff@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Letti",
-      "url": "./images/2x/letti@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/letti@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Mr.Rabibt",
-      "url": "./images/2x/mrrabbit@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/mrrabbit@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Nuturegg",
-      "url": "./images/2x/naturegg@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/naturegg@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Raston",
-      "url": "./images/2x/raston@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/raston@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Tirolez",
-      "url": "./images/2x/tirolez@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/tirolez@2x.png",
+      "hrefLink": ""
     },
     {
       "name": "Villa Piva",
-      "url": "./images/2x/villapiva@2x.png",
-      "link": ""
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    }
+  ],
+  "filters": [
+    {
+      "name": "Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    },
+    {
+      "name": "Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    },
+    {
+      "name": "Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    },
+    {
+      "name": "Villa Piva Villa Piva Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    },
+    {
+      "name": "Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
+    },
+    {
+      "name": "Villa Piva",
+      "imgSource": "./images/2x/villapiva@2x.png",
+      "hrefLink": ""
     }
   ]
 }
