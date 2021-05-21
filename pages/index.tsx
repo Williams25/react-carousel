@@ -1,4 +1,4 @@
-import { Carousel, SellersList } from "../src/components";
+import { Carousel, SellersList, FilterList } from "../src/components";
 import { Container } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import data from "../data.json";
@@ -7,14 +7,11 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      // position: "relative",
       background: "url(./rows.svg)",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundPositionX: "0",
       backgroundPositionY: "11rem",
-      // width: "100%",
-      // height: "100%",
     },
     container: {
       zIndex: 2,
@@ -23,17 +20,15 @@ const useStyles = makeStyles((theme: Theme) =>
     rowsImage: {
       position: "absolute",
       zIndex: 0,
-      
     }
   })
 );
 
 export default function Home() {
   const styled = useStyles();
-  const { carouselItems, sellersItems } = data;
+  const { carouselItems, sellersItems, filters } = data;
   return (
     <Container className={styled.root}>
-      {/* <div className={styled.rowsImage}></div> */}
       <Container className={styled.container}>
         <Carousel
           carouselItemsMobile={carouselItems}
@@ -44,6 +39,10 @@ export default function Home() {
 
       <Container className={styled.container}>
         <SellersList title="Compre por loja" sellers={sellersItems} />
+      </Container>
+
+      <Container className={styled.container}>
+        <FilterList title="Ou por filtros" filters={filters} />
       </Container>
     </Container>
   );
