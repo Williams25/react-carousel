@@ -6,7 +6,6 @@ import {
   Theme,
   IconButton,
 } from "@material-ui/core";
-import { ArrowLeft, ArrowRight } from "@material-ui/icons";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -17,9 +16,9 @@ type CarouselProps = {
 };
 
 type CarouselItem = {
-  source: string;
+  imgSource: string;
   description: string;
-  link: string;
+  hrefLink: string;
 };
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -131,9 +130,9 @@ export const CarouselTextImage = ({
           {matches
             ? carouselItemsDesktop.map((item) => {
                 return (
-                  <div key={item.source} className={styled.content}>
+                  <div key={item.imgSource} className={styled.content}>
                     <img
-                      src={item.source}
+                      src={item.imgSource}
                       alt={item.description}
                       className={styled.root}
                     />
@@ -142,9 +141,9 @@ export const CarouselTextImage = ({
               })
             : carouselItemsMobile.map((item) => {
                 return (
-                  <div key={item.source} className={styled.content}>
+                  <div key={item.imgSource} className={styled.content}>
                     <img
-                      src={item.source}
+                      src={item.imgSource}
                       alt={item.description}
                       className={styled.root}
                     />
